@@ -1,0 +1,151 @@
+body {
+    font-family: 'Orbitron', monospace, sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #2e2e4a;
+    border-bottom: 1px solid #00f0ff;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #00ff88 !important;
+    text-shadow: 0 0 5px #00ff88;
+}
+
+.nav-link {
+    color: #00f0ff !important;
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-link:hover,
+.nav-item.active .nav-link {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+.container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 300;
+    color: #00f0ff;
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.7);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2rem;
+    border-bottom: 1px solid #00ff88;
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.section {
+    background-color: #2e2e4a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 0.6rem 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    background-color: #00ff88;
+    border-color: #00ff88;
+    color: #1a1a2e;
+    text-shadow: none;
+}
+
+.btn:hover {
+    background-color: #00f0ff;
+    border-color: #00f0ff;
+    color: #ffffff;
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+    border-top: 1px solid #2e2e4a;
+}
+
+.machine-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.machine-item {
+    border-left: 4px solid #00f0ff;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.machine-item h4 {
+    margin-top: 0;
+    color: #00ff88;
+}
+
+/* Card styles for cyber theme */
+.card {
+    background-color: #2e2e4a; /* .section と同じ背景色 */
+    color: #e0e0e0;           /* 基本のテキスト色 */
+    border: 1px solid #00f0ff; /* 枠線を追加して境界を明確に */
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); /* ナビゲーションバーと同じシャドウ */
+}
+.card-title {
+    color: #00f0ff; /* h1, h2 と同じタイトル色 */
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.7); /* h1, h2 と同じシャドウ */
+}
+.card-text {
+    color: #e0e0e0; /* 基本のテキスト色 */
+}
+.jumbotron {
+    background-color: #2e2e4a; /* .section と同じ背景色 */
+    color: #e0e0e0;           /* 基本のテキスト色 */
+    border: 1px solid #00f0ff; /* 枠線を追加して境界を明確に */
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); /* ナビゲーションバーと同じシャドウ */
+}
+.jumbotron h1, .jumbotron p.lead {
+    color: #00f0ff; /* ジャンボトロン内のテキスト色 */
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.7);
+}
+
+/* Ensure text in sections is readable */
+.section p,
+.section li,
+.section a,
+.section div {
+    color: white !important; /* 明るいグレーから白に変更 */
+}
+/* For strong tags within sections */
+.section strong {
+    color: #00ff88 !important; /* 強調表示は緑色に */
+}
+
+/* 強力なテキストカラー修正 for members.html */
+.member-info p,
+.member-info strong,
+.member-info h2 {
+    color: white !important;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便利なCUIコマンド集</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">My Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="achievements.html">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activity.html">Activity</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="members.html">Members</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="commands.html">CUIコマンド集 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="h_code_spec.html">hコード仕様書</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kamen_rider_union.html">仮面ライダーユニオン</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>便利なCUIコマンド集</h1>
+
+        <section>
+            <h2>ファイル・ディレクトリ操作</h2>
+            <h3>ls (list)</h3>
+            <p>ディレクトリの内容を一覧表示します。</p>
+            <pre><code>ls -l # 詳細表示
+ls -a # 隠しファイルも表示</code></pre>
+
+            <h3>cd (change directory)</h3>
+            <p>カレントディレクトリを変更します。</p>
+            <pre><code>cd /path/to/directory # 指定したディレクトリへ移動
+cd .. # 親ディレクトリへ移動
+cd ~ # ホームディレクトリへ移動</code></pre>
+
+            <h3>pwd (print working directory)</h3>
+            <p>現在の作業ディレクトリのパスを表示します。</p>
+            <pre><code>pwd</code></pre>
+
+            <h3>mkdir (make directory)</h3>
+            <p>新しいディレクトリを作成します。</p>
+            <pre><code>mkdir new_directory # 新しいディレクトリを作成
+mkdir -p parent/child # 階層的にディレクトリを作成</code></pre>
+
+            <h3>rm (remove)</h3>
+            <p>ファイルやディレクトリを削除します。</p>
+            <pre><code>rm file.txt # ファイルを削除
+rm -r directory # ディレクトリを再帰的に削除
+rm -rf directory # 確認なしで強制的に削除 (注意！)</code></pre>
+
+            <h3>cp (copy)</h3>
+            <p>ファイルやディレクトリをコピーします。</p>
+            <pre><code>cp file.txt /path/to/destination # ファイルをコピー
+cp -r directory /path/to/destination # ディレクトリを再帰的にコピー</code></pre>
+
+            <h3>mv (move)</h3>
+            <p>ファイルやディレクトリを移動または名前変更します。</p>
+            <pre><code>mv file.txt /path/to/destination # ファイルを移動
+mv old_name.txt new_name.txt # ファイル名を変更</code></pre>
+        </section>
+
+        <section>
+            <h2>ファイル内容表示・検索</h2>
+            <h3>cat (concatenate)</h3>
+            <p>ファイルの内容を表示します。</p>
+            <pre><code>cat file.txt</code></pre>
+
+            <h3>grep (global regular expression print)</h3>
+            <p>ファイルの中から指定したパターンに一致する行を検索します。</p>
+            <pre><code>grep "keyword" file.txt # キーワードを検索
+grep -r "keyword" . # カレントディレクトリ以下を再帰的に検索</code></pre>
+
+            <h3>find</h3>
+            <p>ファイルやディレクトリを検索します。</p>
+            <pre><code>find . -name "*.txt" # カレントディレクトリ以下で.txtファイルを検索
+find /home -type d -name "my_dir" # /home以下でmy_dirというディレクトリを検索</code></pre>
+        </section>
+
+        <section>
+            <h2>システム情報・プロセス管理</h2>
+            <h3>ssh (secure shell)</h3>
+            <p>リモートサーバーに安全に接続します。</p>
+            <pre><code>ssh user@hostname</code></pre>
+
+            <h3>top / htop</h3>
+            <p>システムのプロセス状況をリアルタイムで表示します。</p>
+            <pre><code>top # 基本的な表示
+htop # より高機能でインタラクティブな表示 (要インストール)</code></pre>
+
+            <h3>df (disk free)</h3>
+            <p>ディスクの空き容量を表示します。</p>
+            <pre><code>df -h # 人間が読みやすい形式で表示</code></pre>
+
+            <h3>du (disk usage)</h3>
+            <p>ファイルやディレクトリのディスク使用量を表示します。</p>
+            <pre><code>du -sh /path/to/directory # 指定したディレクトリの合計サイズを表示</code></pre>
+
+            <h3>ps (process status)</h3>
+            <p>現在実行中のプロセスを表示します。</p>
+            <pre><code>ps aux # すべてのユーザーのプロセスを詳細表示
+ps -ef | grep nginx # nginxプロセスを検索</code></pre>
+
+            <h3>kill</h3>
+            <p>プロセスを終了させます。</p>
+            <pre><code>kill PID # 指定したPIDのプロセスを終了
+kill -9 PID # 強制終了 (注意！)</code></pre>
+        </section>
+
+        <section>
+            <h2>パーミッション・所有者変更</h2>
+            <h3>chmod (change mode)</h3>
+            <p>ファイルやディレクトリのパーミッション（アクセス権）を変更します。</p>
+            <pre><code>chmod 755 script.sh # 実行権限を付与
+chmod +x script.sh # 実行権限を追加</code></pre>
+
+            <h3>chown (change owner)</h3>
+            <p>ファイルやディレクトリの所有者やグループを変更します。</p>
+            <pre><code>chown user:group file.txt # 所有者とグループを変更</code></pre>
+        </section>
+
+        <section>
+            <h2>ネットワーク操作</h2>
+            <h3>wget / curl</h3>
+            <p>Webからファイルをダウンロードしたり、HTTPリクエストを送信したりします。</p>
+            <pre><code>wget https://example.com/file.zip # ファイルをダウンロード
+curl -O https://example.com/file.zip # ファイルをダウンロード
+curl -X POST -d "data" https://example.com/api # POSTリクエストを送信</code></pre>
+        </section>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2025 My Website</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

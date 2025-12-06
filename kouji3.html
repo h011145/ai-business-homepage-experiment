@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>メモページ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">My Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="achievements.html">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activity.html">Activity</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="members.html">Members</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>メモ</h1>
+        <section>
+            <div class="form-group">
+                <label for="memo">メモを入力してください。内容はブラウザに保存されます。</label>
+                <textarea id="memo" class="form-control" rows="10"></textarea>
+            </div>
+        </section>
+
+        <section>
+            <h2>ローカルストレージについて</h2>
+            <p>
+                localStorageは、Webブラウザにデータを保存するための仕組みです。
+            </p>
+            <p>
+                <strong>特徴:</strong>
+            <ul>
+                <li>Webサイトごとに独立した領域にデータを保存</li>
+                <li>文字列データのみ保存可能</li>
+                <li>保存されたデータは、Webブラウザを閉じても保持される</li>
+            </ul>
+            </p>
+            <p>
+                <strong>メリット:</strong>
+            <ul>
+                <li>手軽にデータを保存できる</li>
+                <li>Webサーバーが不要</li>
+            </ul>
+            </p>
+            <p>
+                <strong>デメリット:</strong>
+            <ul>
+                <li>ブラウザごとにデータが独立しているため、他のブラウザやデバイスからはアクセスできない</li>
+                <li>localStorageの容量には制限がある</li>
+                <li>セキュリティ上の注意点がある (機密性の高い情報は保存しないこと)</li>
+            </ul>
+            </p>
+            <p>
+                このメモページでは、localStorageを使ってメモの内容を保存しています。
+            </p>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // メモの保存と読み込み
+        const memoTextarea = document.getElementById('memo');
+
+        // ページ読み込み時に保存されたメモを読み込む
+        window.addEventListener('load', () => {
+            const savedMemo = localStorage.getItem('myMemo');
+            if (savedMemo) {
+                memoTextarea.value = savedMemo;
+            }
+        });
+
+        // メモが変更されたら保存する
+        memoTextarea.addEventListener('input', () => {
+            localStorage.setItem('myMemo', memoTextarea.value);
+        });
+    </script>
+</body>
+
+</html>
