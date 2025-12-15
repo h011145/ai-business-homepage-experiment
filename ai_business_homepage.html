@@ -3,123 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI快やさん</title>
-    <!-- プロジェクトサイトのCSS/JS/画像への正しいパス解決のためにBASEタグを追加 -->
+    <title>AI Business Experiment</title>
     <base href="https://h011145.github.io/ai-business-homepage-experiment/">
 </head>
 <body>
 <body>
-    <header>
-        <div class="header-container">
-            <h1 class="main-title">AI Revolution Solutions</h1>
-            <p class="sub-title">中小企業とスタートアップのための、革新的なAIソリューションを提供</p>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-logo">AI Humanity Labs</h1>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#about">私たちについて</a></li>
-                    <li><a href="#services">サービス</a></li>
-                    <li><a href="#testimonials">お客様の声</a></li>
-                    <li><a href="#contact-cta">お問い合わせ</a></li>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="about" class="section-about">
+        <section id="home" class="hero-section section-padding dark-bg text-center">
             <div class="container">
-                <h2 class="section-title">AIが拓く、新たなビジネスの地平</h2>
-                <p>AI Revolution Solutionsは、複雑化するビジネス環境において、中小企業やスタートアップの皆様がAIの力を最大限に活用し、競争優位性を確立できるよう支援します。</p>
-                <p>私たちの目標は、最先端のAI技術を誰もが手軽に、そして効果的にビジネスに統合できる未来を創造することです。データに基づいた意思決定、効率的な業務プロセス、そして革新的な顧客体験をAIが実現します。</p>
-                <p class="video-link-wrapper">
-                    <a href="https://www.youtube.com/watch?v=xxxxxxxxxxx" target="_blank" rel="noopener noreferrer" class="external-link">私たちのビジョンを動画で見る（YouTubeへ）</a>
-                </p>
+                <h2 class="hero-title">AIと人間性の融合が生み出す、<br>新しい価値創造の地平へ。</h2>
+                <p class="hero-subtitle">未来志向の全ての企業と個人へ。私たちは、AIの無限の可能性を人間性の豊かさと統合し、未だ見ぬイノベーションを共に追求します。</p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn primary-btn">サービスを詳しく見る</a>
+                    <a href="#contact" class="btn secondary-btn">お問い合わせ</a>
+                </div>
             </div>
         </section>
 
-        <section id="services" class="section-services">
+        <section id="about" class="about-section section-padding light-bg">
             <div class="container">
-                <h2 class="section-title">提供するサービス</h2>
-
-                <article class="service-item">
-                    <h3 class="service-title">コンテンツ自動生成ソリューション</h3>
-                    <p>高品質なテキストコンテンツをAIが瞬時に生成。ブログ記事、SNS投稿、メールマガジン、広告コピーなど、多岐にわたるマーケティング資料作成を効率化します。SEO最適化されたコンテンツで、ウェブサイトのトラフィックとエンゲージメントを向上させます。</p>
-                    <ul class="features-list">
-                        <li>SEOに強い記事コンテンツの高速生成</li>
-                        <li>SNS投稿や広告コピーのバリエーション作成</li>
-                        <li>多言語対応のコンテンツ生成</li>
-                        <li>ブランドトーンに合わせたカスタマイズ</li>
-                    </ul>
-                    <p class="video-link-wrapper">
-                        <a href="https://www.youtube.com/watch?v=yyyyyyyyyyy" target="_blank" rel="noopener noreferrer" class="external-link">コンテンツ自動生成デモ動画を見る（YouTubeへ）</a>
-                    </p>
-                </article>
-
-                <article class="service-item">
-                    <h3 class="service-title">高度データ分析ソリューション</h3>
-                    <p>貴社の持つ膨大なデータをAIが解析し、ビジネスの意思決定をサポートする実用的な洞察を提供します。顧客行動分析、市場トレンド予測、競合分析を通じて、新たなビジネスチャンスの発見や既存プロセスの最適化を支援します。</p>
-                    <ul class="features-list">
-                        <li>顧客行動・購買パターンの詳細分析</li>
-                        <li>市場トレンド予測と競合他社分析</li>
-                        <li>業務プロセスのボトルネック特定と改善提案</li>
-                        <li>パーソナライズされたレコメンデーションシステムの構築</li>
-                    </ul>
-                    <p class="video-link-wrapper">
-                        <a href="https://www.youtube.com/watch?v=zzzzzzzzzzz" target="_blank" rel="noopener noreferrer" class="external-link">データ分析活用事例動画を見る（YouTubeへ）</a>
-                    </p>
-                </article>
+                <h3 class="section-title accent-line">私たちのビジョン：AIと人間性のシンフォニー</h3>
+                <p>私たちは、AIが単なるツールに留まらず、人間が持つ創造性、共感、直観といった特性と響き合い、より深く豊かな社会を築く可能性を信じています。</p>
+                <p>複雑な課題に対するAIの精密な分析能力と、人間の持つ柔軟な思考と倫理観が融合することで、持続可能で人々に真の価値をもたらすソリューションを創造します。</p>
+                <div class="video-link-wrapper text-center">
+                    <p class="video-description">私たちの哲学をより深く理解するために、コンセプトムービーをご覧ください。</p>
+                    <a href="https://www.youtube.com/watch?v=your_concept_video_id_here" target="_blank" rel="noopener noreferrer" class="video-btn">
+                        コンセプト動画を見る <span class="icon-play">&#9658;</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="testimonials" class="section-testimonials">
+        <section id="services" class="services-section section-padding dark-bg">
             <div class="container">
-                <h2 class="section-title">お客様の声</h2>
+                <h3 class="section-title accent-line">提供サービス：動的コンテンツ生成AIエージェント</h3>
+                <p>データに基づき、ユーザーの文脈や感情にリアルタイムで適応する、次世代の動的コンテンツ生成AIエージェントを提供します。</p>
 
-                <blockquote class="testimonial-card" cite="https://example.com/companyA">
-                    <p class="quote">「AI Revolution Solutionsの導入により、業務効率が劇的に向上し、想像以上のコスト削減に繋がりました。特にコンテンツ生成の速度と品質には目を見張るものがあります。AIへの投資がこれほど短期間で回収できるとは思いませんでした。」</p>
-                    <footer class="client-info">— <strong>〇〇株式会社 代表取締役</strong></footer>
-                </blockquote>
+                <div class="service-features">
+                    <article class="feature-card">
+                        <h4 class="feature-title">パーソナライズされた体験</h4>
+                        <p>個々のユーザーに最適化されたコンテンツを瞬時に生成し、エンゲージメントを最大化します。</p>
+                    </article>
+                    <article class="feature-card">
+                        <h4 class="feature-title">リアルタイム適応</h4>
+                        <p>ユーザーの行動、市場のトレンド、環境の変化に動的に対応し、常に最適な情報を提供します。</p>
+                    </article>
+                    <article class="feature-card">
+                        <h4 class="feature-title">多様なメディア対応</h4>
+                        <p>テキスト、画像、音声、動画など、あらゆる形式のコンテンツ生成をサポートします。</p>
+                    </article>
+                    <article class="feature-card">
+                        <h4 class="feature-title">倫理的AI設計</h4>
+                        <p>透明性と公正性を重視したAIモデルにより、信頼性の高いコンテンツ運用を支援します。</p>
+                    </article>
+                </div>
 
-                <blockquote class="testimonial-card" cite="https://example.com/companyB">
-                    <p class="quote">「スタートアップにとってAIの導入は敷居が高いと感じていましたが、AI Revolution Solutionsの丁寧なサポートと実践的な提案のおかげで、新しい顧客層の開拓とデータに基づいた意思決定が可能になりました。未来志向の提案に深く感謝しています。」</p>
-                    <footer class="client-info">— <strong>△△スタートアップ CTO</strong></footer>
-                </blockquote>
+                <div class="launch-info text-center">
+                    <p class="launch-date-text"><strong>正式提供開始日: </strong><span class="launch-date">2025年12月16日</span></p>
+                    <p>詳細情報と早期アクセスにご興味のある方は、ぜひお問い合わせください。</p>
+                </div>
 
-                <blockquote class="testimonial-card" cite="https://example.com/companyC">
-                    <p class="quote">「データ分析サービスを利用して以来、これまで見えていなかった市場の動向や顧客ニーズを正確に把握できるようになりました。これにより、新製品開発の方向性が明確になり、事業戦略に大きな確信を持てています。」</p>
-                    <footer class="client-info">— <strong>□□合同会社 マーケティング責任者</strong></footer>
-                </blockquote>
+                <div class="video-link-wrapper text-center">
+                    <p class="video-description">動的コンテンツ生成AIエージェントのデモンストレーションをご覧ください。</p>
+                    <a href="https://www.youtube.com/watch?v=your_service_demo_video_id_here" target="_blank" rel="noopener noreferrer" class="video-btn">
+                        デモ動画を見る <span class="icon-play">&#9658;</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="contact-cta" class="section-cta">
+        <section class="why-us-section section-padding light-bg">
             <div class="container">
-                <h2 class="section-title">次のステップへ：AIと共に未来を創造しませんか？</h2>
-                <p>私たちAI Revolution Solutionsは、中小企業やスタートアップの皆様がAIの力を最大限に活用し、競争優位性を確立できるようサポートします。</p>
-                <p>AIの導入は、ビジネスを次のレベルへと押し上げるための強力な一歩です。貴社の具体的な課題や目標について、ぜひお聞かせください。</p>
-                <p class="cta-buttons">
-                    <a href="mailto:neo862731@gmail.com" class="button button-primary">無料相談・お問い合わせはこちら</a>
-                </p>
-                <p class="video-link-wrapper">
-                    <a href="https://www.youtube.com/watch?v=aaaaaaaaaaa" target="_blank" rel="noopener noreferrer" class="external-link">AI Revolution Solutions 詳細紹介動画（YouTubeへ）</a>
-                </p>
+                <h3 class="section-title accent-line">未来を共創するパートナーシップ</h3>
+                <p>私たちは単なる技術提供者ではありません。お客様のビジネスに深く寄り添い、AIを最大限に活用して新たな成長と変革を共に実現するパートナーです。</p>
+                <p>技術の最前線を走り続ける専門チームが、お客様の具体的なニーズに合わせたカスタムソリューションと、包括的なサポートを提供します。</p>
+                <div class="text-center mt-40">
+                    <a href="#contact" class="btn primary-btn">私たちとの共創を始める</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding dark-bg text-center">
+            <div class="container">
+                <h3 class="section-title accent-line">お問い合わせ</h3>
+                <p>AIと人間性の融合による新しい価値創造にご興味をお持ちいただけましたでしょうか？</p>
+                <p>私たちのサービスについてのご質問、ご相談、または未来のプロジェクトについて語り合いましょう。</p>
+                <p class="contact-email">Email: <a href="mailto:contact@example.ai" class="email-link">contact@example.ai</a></p>
+                <a href="mailto:contact@example.ai" class="btn primary-btn mt-20">今すぐお問い合わせ</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2023 AI Revolution Solutions. All rights reserved.</p>
-            <p>お問い合わせ: <a href="mailto:neo862731@gmail.com" class="footer-email">neo862731@gmail.com</a></p>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#about">私たちについて</a></li>
-                    <li><a href="#services">サービス</a></li>
-                    <li><a href="#testimonials">お客様の声</a></li>
-                    <li><a href="#contact-cta">お問い合わせ</a></li>
-                </ul>
-            </nav>
+    <footer class="site-footer dark-bg text-center">
+        <div class="container">
+            <p>&copy; 2024 AI Humanity Labs. All rights reserved.</p>
+            <p>Email: <a href="mailto:contact@example.ai" class="footer-link">contact@example.ai</a></p>
+            <!-- ソーシャルメディアリンクなどを追加することも可能ですが、今回はシンプルに -->
         </div>
     </footer>
+
+    <!--
+    このHTML構造をレンダリングする際のCSSスタイルのヒント:
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #1a1a2e; /* 深い紺色 */
+        color: #e0e0e0; /* オフホワイト */
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .site-header {
+        background-color: #0d0d1a; /* さらに暗い色 */
+        padding: 20px 0;
+        border-bottom: 1px solid #3a3a4e;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-logo {
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #ffd700; /* ゴールド */
+        margin: 0;
+    }
+
+    .main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .main-nav li {
+        margin-left: 30px;
+    }
+
+    .nav-link {
+        color: #e0e0e0;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #50a0ff; /* 鮮やかな青 */
+        border-bottom: 2px solid #50a0ff;
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .dark-bg {
+        background-color: #1a1a2e;
+    }
+
+    .light-bg {
+        background-color: #2a2a3e; /* 少し明るい紺色 */
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .hero-section {
+        padding: 120px 0;
+        background-image: linear-gradient(rgba(26,26,46,0.8), rgba(26,26,46,0.8)), url('path/to/hero-background.jpg'); /* 抽象的なAI背景画像を想定 */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-title {
+        font-size: 3.2em;
+        color: #fff;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3em;
+        color: #c0c0d0;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        margin: 0 10px;
+        font-size: 1.1em;
+    }
+
+    .primary-btn {
+        background-color: #50a0ff;
+        color: #1a1a2e;
+        border: 2px solid #50a0ff;
+    }
+
+    .primary-btn:hover {
+        background-color: #70b0ff;
+        border-color: #70b0ff;
+    }
+
+    .secondary-btn {
+        background-color: transparent;
+        color: #50a0ff;
+        border: 2px solid #50a0ff;
+    }
+
+    .secondary-btn:hover {
+        background-color: #50a0ff;
+        color: #1a1a2e;
+    }
+
+    .section-title {
+        font-size: 2.5em;
+        font-weight: 700;
+        color: #e0e0e0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .accent-line::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background-color: #ffd700; /* ゴールド */
+        margin: 20px auto 0;
+    }
+
+    .about-section p, .services-section p, .why-us-section p, .contact-section p {
+        max-width: 900px;
+        margin: 20px auto;
+        font-size: 1.1em;
+        color: #c0c0d0;
+    }
+
+    .video-link-wrapper {
+        margin-top: 50px;
+        padding: 30px;
+        background-color: #3a3a4e;
+        border-radius: 10px;
+    }
+
+    .video-description {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        color: #e0e0e0;
+    }
+
+    .video-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 25px;
+        background-color: #ffd700; /* ゴールド */
+        color: #1a1a2e;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .video-btn:hover {
+        background-color: #ffeb3b;
+    }
+
+    .icon-play {
+        margin-left: 10px;
+        font-size: 1.2em;
+        line-height: 1;
+    }
+
+    .service-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .feature-card {
+        background-color: #2a2a3e;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .feature-title {
+        font-size: 1.5em;
+        color: #50a0ff; /* 鮮やかな青 */
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .feature-card p {
+        font-size: 1em;
+        color: #c0c0d0;
+        margin: 0;
+    }
+
+    .launch-info {
+        background-color: #3a3a4e;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 50px auto;
+        max-width: 700px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .launch-date-text {
+        font-size: 1.3em;
+        color: #e0e0e0;
+        margin-bottom: 15px;
+    }
+
+    .launch-date {
+        color: #ffd700; /* ゴールド */
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+
+    .contact-email, .footer-link {
+        font-size: 1.2em;
+        margin-top: 30px;
+    }
+
+    .email-link, .footer-link {
+        color: #50a0ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .email-link:hover, .footer-link:hover {
+        color: #70b0ff;
+        text-decoration: underline;
+    }
+
+    .mt-20 { margin-top: 20px; }
+    .mt-40 { margin-top: 40px; }
+
+    .site-footer {
+        padding: 40px 0;
+        border-top: 1px solid #3a3a4e;
+        color: #c0c0d0;
+        font-size: 0.9em;
+    }
+
+    .site-footer p {
+        margin: 5px 0;
+    }
+    -->
 </body>
 </body>
 </html>
