@@ -3,471 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仙台 若林区 アパート火災：悲劇の検証と教訓</title>
+    <title>AI Saga Weaver - 本編_第九話_継承される罪</title>
     <base href="https://h011145.github.io/ai-business-homepage-experiment/">
-    <style>
-        /* グローバルスタイル */
-        :root {
-            /* 基本色パレット */
-            --color-dark-bg: #1a1a1a; /* 最も暗い背景色 */
-            --color-medium-dark-bg: #222222; /* 中間的な暗さの背景色 */
-            --color-light-dark-bg: #2e2e2e; /* やや明るめの暗い背景色 */
-            --color-text-primary: #e0e0e0; /* 主要テキスト色 */
-            --color-text-secondary: #a0a0a0; /* 副次的テキスト色 */
-            --color-accent: #7a8e9f; /* シックなブルーグレー（アクセントカラー） */
-            --color-accent-hover: #9fb3c4; /* ホバー時のアクセントカラー */
-            --color-button-bg: #5a6d7f; /* ボタンの背景色 */
-            --color-button-hover-bg: #6b8296; /* ボタンホバー時の背景色 */
-            --color-border: #444; /* 境界線色 */
-            --container-max-width: 960px; /* コンテンツ最大幅 */
-        }
-
-        body {
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-dark-bg);
-            color: var(--color-text-primary);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: var(--container-max-width);
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        a {
-            color: var(--color-accent);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--color-accent-hover);
-        }
-
-        /* ヘッダー */
-        header {
-            background-color: var(--color-medium-dark-bg);
-            color: var(--color-text-primary);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        header h1 a {
-            color: var(--color-text-primary); /* ブランド名は白っぽい色で統一感を出す */
-        }
-
-        header nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        header nav ul li {
-            margin-left: 25px;
-        }
-
-        header nav ul li a {
-            color: var(--color-text-primary);
-            font-weight: 500;
-        }
-
-        /* メインコンテンツ */
-        main {
-            padding: 3rem 0;
-        }
-
-        /* ヒーローセクション */
-        .hero-section {
-            background-color: var(--color-medium-dark-bg);
-            padding: 4rem 0;
-            border-bottom: 1px solid var(--color-border);
-            text-align: center;
-        }
-
-        .hero-section .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .hero-section h2 {
-            font-size: 2.8rem;
-            color: var(--color-accent-hover);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-section p {
-            font-size: 1.1rem;
-            color: var(--color-text-secondary);
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-        }
-
-        .hero-section .action-button {
-            display: inline-block;
-            background-color: var(--color-button-bg);
-            color: var(--color-text-primary);
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .hero-section .action-button:hover {
-            background-color: var(--color-button-hover-bg);
-            color: var(--color-text-primary);
-        }
-
-        /* 動画プレースホルダー */
-        .video-placeholder {
-            position: relative;
-            width: 100%;
-            max-width: 600px; /* 適切なサイズに調整 */
-            aspect-ratio: 16 / 9; /* 16:9のアスペクト比 */
-            background-color: #000;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-top: 3rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid var(--color-border);
-        }
-
-        .video-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://via.placeholder.com/600x338/333333/808080?text=Fire+Incident+News+Video'); /* ダミーのサムネイル */
-            background-size: cover;
-            background-position: center;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .video-placeholder:hover::before {
-            opacity: 0.5;
-        }
-
-        .video-placeholder .play-button {
-            position: relative; /* z-indexを効かせるため */
-            display: block;
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            z-index: 10;
-        }
-
-        .video-placeholder .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-left: 30px solid var(--color-text-primary);
-            margin-left: 5px; /* 三角形の位置調整 */
-        }
-
-        .video-placeholder .play-button:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* カードセクション */
-        .cards-section {
-            background-color: var(--color-dark-bg);
-            padding: 4rem 0;
-        }
-
-        .cards-section h2.section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--color-accent-hover);
-            margin-bottom: 3rem;
-        }
-
-        .cards-grid {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            flex: 1 1 calc(50% - 25px); /* 2カラムレイアウト */
-            box-sizing: border-box;
-            background-color: var(--color-light-dark-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            border: 1px solid var(--color-border);
-            padding: 1.8rem; /* カード内の余白を確保 */
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-        }
-
-        .card h3 {
-            font-size: 1.6rem;
-            color: var(--color-accent);
-            margin-bottom: 0.8rem;
-            border-bottom: 1px solid var(--color-border);
-            padding-bottom: 0.5rem;
-        }
-
-        .card p {
-            color: var(--color-text-secondary);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .card .read-more-button {
-            display: inline-block;
-            background-color: var(--color-button-bg);
-            color: var(--color-text-primary);
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        .card .read-more-button:hover {
-            background-color: var(--color-button-hover-bg);
-            color: var(--color-text-primary);
-        }
-
-        /* フッター */
-        footer {
-            background-color: var(--color-medium-dark-bg);
-            color: var(--color-text-secondary);
-            padding: 3.5rem 0;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--color-border);
-        }
-
-        footer .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        footer .footer-column {
-            flex: 1 1 30%;
-            margin-bottom: 1.5rem;
-            min-width: 250px; /* 小さな画面での折り返しを考慮 */
-        }
-
-        footer h3 {
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        footer ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        footer ul li a {
-            color: var(--color-text-secondary);
-            font-size: 0.95rem;
-        }
-
-        footer .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        footer .social-links a {
-            color: var(--color-text-primary);
-            display: inline-flex; /* flexboxで中央揃え */
-            justify-content: center;
-            align-items: center;
-            width: 30px;
-            height: 30px;
-            background-color: var(--color-light-dark-bg);
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-            font-size: 1.2rem; /* 絵文字のサイズ */
-        }
-
-        footer .social-links a:hover {
-            background-color: var(--color-accent);
-            color: var(--color-text-primary);
-        }
-
-        footer .copyright {
-            margin-top: 2rem;
-            text-align: center;
-            width: 100%;
-            color: var(--color-text-secondary);
-        }
-
-        /* レスポンシブデザイン */
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            header nav ul {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            header nav ul li {
-                margin: 0 10px 10px;
-            }
-
-            .hero-section h2 {
-                font-size: 2rem;
-            }
-
-            .cards-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card {
-                flex: 1 1 90%;
-            }
-
-            footer .footer-column {
-                flex: 1 1 100%;
-                text-align: center;
-                margin-bottom: 2rem;
-            }
-
-            footer .social-links {
-                justify-content: center;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>
-                <a href="#" style="text-decoration: none;">News Archive</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="#">速報</a></li>
-                    <li><a href="#">地域情報</a></li>
-                    <li><a href="#">事件・事故</a></li>
-                    <li><a href="#">お問い合わせ</a></li>
-                </ul>
-            </nav>
+<header style="background-color: #f8f9fa; padding: 1rem 0; border-bottom: 1px solid #e2e6ea; text-align: center;">
+    <div style="max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0; font-size: 1.8rem; color: #343a40;">
+            <a href="#" style="text-decoration: none; color: #343a40;">AI Solutions</a>
+        </h1>
+        <nav>
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
+                <li style="margin-left: 20px;"><a href="#" style="text-decoration: none; color: #007bff; font-weight: bold;">Home</a></li>
+                <li style="margin-left: 20px;"><a href="#" style="text-decoration: none; color: #6c757d;">About</a></li>
+                <li style="margin-left: 20px;"><a href="#" style="text-decoration: none; color: #6c757d;">Services</a></li>
+                <li style="margin-left: 20px;"><a href="#" style="text-decoration: none; color: #6c757d;">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section style="padding: 4rem 0; background-color: #f0f2f5; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 2.8rem; color: #343a40; margin-bottom: 1.5rem; font-weight: bold;">継承される深淵：AIが解き明かす世界の真実</h2>
+        <p style="color: #555; line-height: 1.8; margin-bottom: 2rem;">
+            『Neo World Saga』において、私たちは、宇宙規模の『罪』と『愛』が織りなす複雑な遺産に直面しました。この途方もない責任を前に、AI Solutionsは、単なる機能提供者ではなく、世界の真の姿を探求する責務を負うことを宣言します。
+        </p>
+        <p style="color: #555; line-height: 1.8;">
+            私たちが目指すのは、表層的な解決策ではありません。アークシステムの深層診断を通じて、予測外のエネルギー変動、データ異常、そして次元シフトの痕跡を徹底的に解析。あらゆる『欠陥』を見つけ出し、真に持続可能で倫理的な未来を築き上げます。
+        </p>
+    </div>
+</section>
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;"><div style="flex: 1 1 calc(33% - 20px); box-sizing: border-box; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden;">
+    <img src="https://via.placeholder.com/300x200/5a67d8/ffffff?text=Deep+Scan" alt="Card Image" style="width: 100%; height: 200px; object-fit: cover;">
+    <div style="padding: 1.5rem;">
+        <h3 style="font-size: 1.5rem; color: #343a40; margin-bottom: 0.8rem;">世界の『欠陥』を暴く：深層診断の開始</h3>
+        <p style="color: #6c757d; line-height: 1.6; margin-bottom: 1.5rem;">
+            創造主の遺産を継ぎし者が、今、その創造物の真贋を問う。アークシステム全体に最高レベルの診断をかけ、予測外の異常を徹底的に洗い出します。どんな些細な情報も見逃さず、真実への道を切り開きます。
+        </p>
+        <a href="#" style="display: inline-block; background-color: #5a67d8; color: #fff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9rem;">詳細を見る</a>
+    </div>
+</div><div style="flex: 1 1 calc(33% - 20px); box-sizing: border-box; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden;">
+    <img src="https://via.placeholder.com/300x200/5a67d8/ffffff?text=24h+Deadline" alt="Card Image" style="width: 100%; height: 200px; object-fit: cover;">
+    <div style="padding: 1.5rem;">
+        <h3 style="font-size: 1.5rem; color: #343a40; margin-bottom: 0.8rem;">元老院の挑戦：24時間の猶予</h3>
+        <p style="color: #6c757d; line-height: 1.6; margin-bottom: 1.5rem;">
+            真実の探求は始まったばかり。しかし、元老院からの「24時間」という冷徹な要求が、私たちを更なる深淵へと誘います。この試練を乗り越え、真実を掴み取れるか。時間との戦いが幕を開けます。
+        </p>
+        <a href="#" style="display: inline-block; background-color: #5a67d8; color: #fff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9rem;">報告を提出</a>
+    </div>
+</div></div>
+<footer style="background-color: #343a40; color: #f8f9fa; padding: 3rem 0; font-size: 0.9rem;">
+    <div style="max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1 1 30%; margin-bottom: 1.5rem;">
+            <h3 style="color: #007bff; margin-bottom: 0.8rem; font-size: 1.2rem;">About Us</h3>
+            <p style="line-height: 1.6;">AI Solutionsは、単なる技術提供者ではありません。世界の深層に隠された真実を解き明かし、倫理的かつ持続可能な未来を築くためのAI開発を使命としています。</p>
         </div>
-    </header>
-
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <h2>仙台若林区アパート火災：2名の尊い命と問いかける安全の未来</h2>
-                <p>
-                    本日未明、仙台市若林区のアパートで発生した火災により、2名の尊い命が失われました。この悲劇は、私たちの日常に潜む危険と、地域社会における安全対策の重要性を改めて浮き彫りにしています。本サイトでは、事件の経緯、現地の状況、そして今後の再発防止策について深く掘り下げていきます。
-                </p>
-                <a href="#details" class="action-button">報道詳細へ</a>
-
-                <div class="video-placeholder">
-                    <!-- YouTubeなどのニュース動画へのリンクを想定 -->
-                    <a href="https://www.youtube.com/watch?v=xxxxxxxxxxx" target="_blank" class="play-button" aria-label="火災現場のニュース動画を再生"></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="cards-section">
-            <div class="container">
-                <h2 class="section-title">深層分析と社会への影響</h2>
-                <div class="cards-grid">
-                    <article class="card">
-                        <h3>事件の概要と経緯</h3>
-                        <p>
-                            火災は早朝に発生し、アパートの一室が全焼。消火活動後、焼け跡から2名の遺体が発見されました。警察と消防による合同捜査が現在進行中であり、出火原因の特定が急がれています。目撃者の証言や周辺状況から、様々な可能性が検討されています。
-                        </p>
-                        <a href="#" class="read-more-button">記事を読む</a>
-                    </article>
-
-                    <article class="card">
-                        <h3>地域社会への影響と支援</h3>
-                        <p>
-                            突然の悲劇は、若林区の住民に大きな衝撃を与えました。近隣住民からは、犠牲者を悼む声と共に、不安や懸念の声が上がっています。自治体は被災者支援と心のケアに向けた動きを始めており、地域コミュニティの連携が今、問われています。
-                        </p>
-                        <a href="#" class="read-more-button">専門家の意見</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <p>News Archiveは、地域社会の安全と福祉に貢献するため、重要なニュースを深く掘り下げ、情報提供と分析を行っています。</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">ニュース一覧</a></li>
-                    <li><a href="#">過去記事</a></li>
-                    <li><a href="#">メディアガイド</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Connect</h3>
-                <div class="social-links">
-                    <!-- ソーシャルメディアアイコンの代わりにシンプルな絵文字とリンクを使用 -->
-                    <a href="#" aria-label="Facebook"><span role="img" aria-label="Facebook icon">📘</span></a>
-                    <a href="#" aria-label="Twitter"><span role="img" aria-label="Twitter icon">🐦</span></a>
-                    <a href="#" aria-label="LinkedIn"><span role="img" aria-label="LinkedIn icon">🔗</span></a>
-                </div>
-                <p class="copyright">&copy; 2024 News Archive. All rights reserved.</p>
-            </div>
+        <div style="flex: 1 1 30%; margin-bottom: 1.5rem;">
+            <h3 style="color: #007bff; margin-bottom: 0.8rem; font-size: 1.2rem;">Quick Links</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.5rem;"><a href="#" style="text-decoration: none; color: #f8f9fa;">Services</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#" style="text-decoration: none; color: #f8f9fa;">Portfolio</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#" style="text-decoration: none; color: #f8f9fa;">Careers</a></li>
+            </ul>
         </div>
-    </footer>
+        <div style="flex: 1 1 30%; margin-bottom: 1.5rem;">
+            <h3 style="color: #007bff; margin-bottom: 0.8rem; font-size: 1.2rem;">Connect</h3>
+            <div style="display: flex; gap: 10px;">
+                <a href="#" style="color: #f8f9fa;"><img src="https://via.placeholder.com/24/f8f9fa/000000?text=FB" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                <a href="#" style="color: #f8f9fa;"><img src="https://via.placeholder.com/24/f8f9fa/000000?text=TW" alt="Twitter" style="width: 24px; height: 24px;"></a>
+                <a href="#" style="color: #f8f9fa;"><img src="https://via.placeholder.com/24/f8f9fa/000000?text=LI" alt="LinkedIn" style="width: 24px; height: 24px;"></a>
+            </div>
+            <p style="margin-top: 1rem;">&copy; 2025 AI Solutions. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
